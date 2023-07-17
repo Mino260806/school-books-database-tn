@@ -27,7 +27,7 @@ class CnpBooksCollector:
     def collect_specific(self, cycle, level, subject,
                          cycle_index, level_index, subject_code):
         for book_id, book_name, book_part, book_link in self.scraper.get_books(cycle, level, subject):
-            book = BookModel(cycle_index, level_index, subject_code, book_part, book_link)
+            book = BookModel(book_id, cycle_index, level_index, subject_code, book_part, book_link)
             yield book
 
     def destroy(self):

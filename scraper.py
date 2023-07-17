@@ -44,5 +44,5 @@ class CnpScraper:
             book_part = int(cols[0].find_element(By.TAG_NAME, "a").text.split()[1]) - 1
             if book_part == 0:
                 book_name = cols[1].text
-                book_id = cols[2].text
+                book_id = int(cols[2].text)
             yield book_id, book_name, book_part, book_link

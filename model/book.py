@@ -3,6 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class BookModel:
+    id: int
     cycle: int
     level: int
     subject: str
